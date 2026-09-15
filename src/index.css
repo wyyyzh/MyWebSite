@@ -179,3 +179,49 @@
     transition: none;
   }
 }
+
+/* ==========================================================================
+   路由切换：每次换页整体淡入，避免内容硬切
+   ========================================================================== */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-enter {
+  animation: page-enter 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   打印 / 导出 PDF：隐藏导航与页脚，去掉背景杂色
+   ========================================================================== */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  body::before {
+    display: none;
+  }
+
+  .card {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}

@@ -32,6 +32,12 @@ jobs:
       - name: 构建
         run: npm run build
 
+      # SPA 路由兜底：GitHub Pages 遇到 /projects/xxx 这类子路由会去找
+      # dist/projects/xxx/index.html，找不到就返回 404.html。
+      # 把 404.html 换成 index.html 的内容，让前端路由自己接管。
+      - name: 生成 SPA 404 兜底页
+        run: cp dist/index.html dist/404.html
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
