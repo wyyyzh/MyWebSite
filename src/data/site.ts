@@ -43,7 +43,7 @@ export interface SiteConfig {
 }
 
 export const site: SiteConfig = {
-  name: 'wyyyzh',
+  name: '夏不语',
   handle: 'wyyyzh',
   version: 'v0.2.0',
   versionName: '站点上线 · 一切刚起步',
@@ -52,7 +52,7 @@ export const site: SiteConfig = {
   // TODO: 换成你的真实身份，比如「前端开发者」「学生」「产品经理」
   role: '开发者',
   intro: [
-    '你好，我是 wyyyzh。这个站点是 2026 年 9 月 15 日上线的个人主页，用 Vite + React 19 + TypeScript + Tailwind CSS 4 从零搭起来的，也是我第一个完全属于自己的站点。',
+    '你好，我是 夏不语。这个站点是 2026 年 9 月 15 日上线的个人主页，用 Vite + React 19 + TypeScript + Tailwind CSS 4 从零搭起来的，也是我第一个完全属于自己的站点。',
     '它的思路是把内容和展示彻底分开：所有文案都收在 `src/data/` 四个文件里，改文字不用碰任何组件代码，保存即热更新。1335 行源码、9 个组件，构建产物压缩后约 78KB。',
     '部署也是自动的：代码 push 到 GitHub，Actions 自动构建并发布到 GitHub Pages，没有后端要维护。这份 README 就是站点的一部分 —— 点开右侧抽屉看到的，和我仓库里的东西是同一套。',
   ],
@@ -67,13 +67,12 @@ export const site: SiteConfig = {
     '# README.md',
     '',
     '## 我是谁',
-    'GitHub 上的 wyyyzh。这个主页是我自己搭的，用来集中放我写的东西。',
+    'GitHub 上的 夏不语。这个主页是我自己搭的，用来集中放我写的东西。',
     '',
     '## 这个站点是怎么做的',
     '- Vite + React 19 + TypeScript + Tailwind CSS 4',
     '- 内容与展示分离：所有文案都在 src/data/ 下，四个文件',
     '- GitHub Actions 自动构建，发布到 GitHub Pages',
-    '- 产物 JS 压缩后约 78KB，没引第三方动画库',
     '',
     '## 技术选择',
     '刻意没装任何动画库，进场效果用自写的 useInView + CSS 过渡实现，省下约 100KB 体积。',

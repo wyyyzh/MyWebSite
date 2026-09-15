@@ -42,6 +42,22 @@ export const projects: Project[] = [
     featured: true,
     link: 'https://github.com/wyyyzh/MyWebSite',
   },
+  {
+    id: 'test',
+    title: '嵌入式 · 我的大学专业',
+    summary:
+      '稍后再说。',
+    highlights: [
+      '1335 行源码、9 个组件，构建产物 JS 压缩后约 78KB',
+      '所有文案集中在 src/data/，改内容不用碰组件代码',
+      'GitHub Actions 自动构建并发布到 GitHub Pages',
+    ],
+    tags: ['Vite', 'React', 'TypeScript', 'Tailwind CSS 4'],
+    year: '2026',
+    visibility: '进行中',
+    featured: true,
+    link: 'https://github.com/wyyyzh/MyWebSite',
+  },
 ]
 
 export default projects
