@@ -3,9 +3,12 @@
  *  人生版本历史（Timeline）
  * ============================================================
  * 每条是一次「发布」。type 决定时间线上的圆点颜色：
- *   major = 大版本（转岗、升学、创业等转折点）
+ *   major = 大版本（上线、转岗、升学等转折点）
  *   minor = 小版本（新项目、新技能）
  *   patch = 补丁（一次修复、一次复盘）
+ *
+ * ⚠️ 下面两条是真实发生过的事，日期取自 MyWebSite 仓库的 git 记录。
+ *    以后的里程碑照着格式往上加（新的放最前面，页面从上往下倒序展示）。
  */
 
 export interface Release {
@@ -18,46 +21,20 @@ export interface Release {
 
 export const releases: Release[] = [
   {
-    version: 'v1.0.0',
-    date: '2026.09',
-    title: '这个站点上线',
-    description: '把过去几年的散落记录，收敛成一条可持续更新的主线。',
+    version: 'v0.2.0',
+    date: '2026.09.15',
+    title: '站点上线到 GitHub Pages',
+    description:
+      '推送后 GitHub Actions 自动完成构建，https://wyyyzh.github.io/MyWebSite/ 首次可访问。从提交到上线不用手动部署。',
     type: 'major',
   },
   {
-    version: 'v0.9.0',
-    date: '2026.07',
-    title: '黑客松：48 小时做出语音 Agent 设备',
-    description: '第一次把 Agent 装进实体硬件，验证了「先确认再执行」的交互假设。',
+    version: 'v0.1.0',
+    date: '2026.09.15',
+    title: 'MyWebSite 仓库建立',
+    description:
+      '用 Vite + React 19 + TypeScript + Tailwind CSS 4 搭起骨架，完成首次 git 提交（4a5e493）。',
     type: 'minor',
-  },
-  {
-    version: 'v0.8.2',
-    date: '2026.04',
-    title: '方法论沉淀：提示词即需求文档',
-    description: '把做产品的拆解习惯迁移到提示词上，效果稳定性明显改善。',
-    type: 'patch',
-  },
-  {
-    version: 'v0.8.0',
-    date: '2025.11',
-    title: '转向 AI 产品方向',
-    description: '开始系统性地把 AI 能力包装成可交付的产品形态，而不只是 demo。',
-    type: 'major',
-  },
-  {
-    version: 'v0.6.0',
-    date: '2025.03',
-    title: '第一版决策类小工具上线',
-    description: '学会一件事：用户要的不是答案，是「为什么是这个答案」。',
-    type: 'minor',
-  },
-  {
-    version: 'v0.4.0',
-    date: '2024.06',
-    title: '完成第一个完整硬件产品',
-    description: '从 0 到 1 定义产品、做调研、直到拿到融资。第一次理解「产品」两个字的重量。',
-    type: 'major',
   },
 ]
 

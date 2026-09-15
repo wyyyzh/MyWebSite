@@ -3,26 +3,25 @@
  *  年度活跃度（主页那张「人生轨迹」热力图）
  * ============================================================
  *
- * 两种用法，二选一：
+ * 现在用的是真实数据：下面的日期来自 MyWebSite 仓库的 git 提交记录，
+ * 数值是当天的提交次数。USE_MANUAL_DATA = true 表示以 manualData 为准。
  *
- * 1）先用示例数据看效果：保持现状即可（下面用确定性算法生成，
- *    每次刷新结果都一样，不会闪）。
+ * 以后想继续记，两种方式都行：
+ *   1）往 manualData 里加一行：'2026-09-16': 3,
+ *   2）把 USE_MANUAL_DATA 改回 false，用算法生成（只是好看，不是真的）
  *
- * 2）换成你自己的真实数据：把 ACTIVITY_YEAR 设为目标年份，
- *    然后把 manualData 填成 { '2026-01-04': 3, '2026-01-05': 1, ... } 的形式，
- *    并把 USE_MANUAL_DATA 改成 true。
- *    数值含义随你定义：写了几篇笔记、提交几次代码、甚至只是「今天很充实」。
+ * 数值含义随你定义：提交几次代码、写了几篇笔记，
+ * 甚至只是「今天很充实」都行。
  */
 
 export const ACTIVITY_YEAR = 2026
 
-export const USE_MANUAL_DATA = false
+export const USE_MANUAL_DATA = true
 
 /** 手写数据：日期 -> 强度（0 表示当天无记录） */
 export const manualData: Record<string, number> = {
-  // '2026-01-04': 3,
-  // '2026-01-05': 1,
-  // '2026-03-12': 4,
+  // 真实提交记录（来自 git log --pretty=format:"%ad" --date=short）
+  '2026-09-15': 2,
 }
 
 export interface DayCell {
@@ -57,7 +56,7 @@ function levelOf(count: number): DayCell['level'] {
   return 4
 }
 
-/** 生成某一年 1/1 ~ 12/31 的每一天 */
+/** 生成某一年 1/1 ~ 12/31 的每一天（示例模式用） */
 function generateYear(year: number): DayCell[] {
   const rand = createRandom(year * 7919)
   const cells: DayCell[] = []

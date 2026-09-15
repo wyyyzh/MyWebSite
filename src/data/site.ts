@@ -1,8 +1,11 @@
 /**
  * ============================================================
- *  站点全局配置 —— 你最需要改的文件（之一）
+ *  站点全局配置
  * ============================================================
  * 改完保存，浏览器会自动热更新，不用重启。
+ *
+ * ✅ 本文件已全部换成真实信息（来自你的 GitHub 与 git 提交记录）。
+ *    只剩两处需要你按自己想法调整，已用 TODO 注释标出。
  */
 
 export interface LinkItem {
@@ -19,7 +22,7 @@ export interface SiteConfig {
   handle: string
   /** 当前人生版本号，右上角和 Hero 都会显示 */
   version: string
-  /** 当前版本代号，例如 "在当前公司负责 AI 产品" */
+  /** 当前版本代号 */
   versionName: string
   /** Hero 主标语（一句话讲清你是谁） */
   tagline: string
@@ -40,42 +43,44 @@ export interface SiteConfig {
 }
 
 export const site: SiteConfig = {
-  name: '林知远',
-  handle: '知远',
-  version: 'v1.0.0',
-  versionName: '独立开发 · 寻找下一个问题',
+  name: 'wyyyzh',
+  handle: 'wyyyzh',
+  version: 'v0.2.0',
+  versionName: '站点上线 · 一切刚起步',
   tagline: '我不是一个完成品。\n我是一段版本历史。',
-  subtitle: '用 Git 的方式记录人生：每次提交都是一次更新，每次发布都是一个阶段。',
-  role: 'AI 产品经理 / 独立开发者',
+  subtitle: '用 Git 的方式记录自己：每次提交都是一次更新，每次发布都是一个阶段。',
+  // TODO: 换成你的真实身份，比如「前端开发者」「学生」「产品经理」
+  role: '开发者',
   intro: [
-    '你好，我是知远。我把自己的经历当成一份持续维护的仓库：项目是提交，阶段是发布，走过的弯路是回滚。',
-    '过去几年我一直在做同一件事 —— 把一个模糊的想法，拆成能被真实用户用起来的东西。从硬件机器人到 AI Agent，载体在变，方法没变。',
-    '这个站点就是那份仓库的公开索引。它不会「完成」，只会不断有新版本。',
+    '你好，我是 wyyyzh。这个站点是 2026 年 9 月 15 日上线的个人主页，用 Vite + React 19 + TypeScript + Tailwind CSS 4 从零搭起来的，也是我第一个完全属于自己的站点。',
+    '它的思路是把内容和展示彻底分开：所有文案都收在 `src/data/` 四个文件里，改文字不用碰任何组件代码，保存即热更新。1335 行源码、9 个组件，构建产物压缩后约 78KB。',
+    '部署也是自动的：代码 push 到 GitHub，Actions 自动构建并发布到 GitHub Pages，没有后端要维护。这份 README 就是站点的一部分 —— 点开右侧抽屉看到的，和我仓库里的东西是同一套。',
   ],
-  exploring: '当 AI 能完成大部分执行工作后，「判断做什么」这件事还剩下多少属于人？',
-  email: 'hello@example.com',
+  // TODO: 换成你现在真正在琢磨的问题（这是全站最有个人色彩的一句话）
+  exploring: '怎么把散落的记录，沉淀成一条别人一眼能看懂的主线。',
+  // 取自你 git 提交记录的作者邮箱，不想公开就删掉或换成别的
+  email: '1753691858@qq.com',
   links: [
-    { label: 'GitHub', href: 'https://github.com/your-id', external: true },
-    { label: 'X / 推特', href: 'https://x.com/your-id', external: true },
-    { label: '即刻', href: 'https://okjike.com/u/your-id', external: true },
-    { label: '邮箱', href: 'mailto:hello@example.com' },
+    { label: 'GitHub', href: 'https://github.com/wyyyzh', external: true },
   ],
   readme: [
     '# README.md',
     '',
     '## 我是谁',
-    '一名把「做东西」当成主要学习方式的 AI 产品经理。',
+    'GitHub 上的 wyyyzh。这个主页是我自己搭的，用来集中放我写的东西。',
     '',
-    '## 我擅长什么',
-    '- 从 0 到 1 定义产品：需求拆解、用户研究、竞品调研',
-    '- 把 AI 能力包装成可交付的产品形态，而不只是 demo',
-    '- 快速原型：能在几天内把想法变成能点、能用的东西',
+    '## 这个站点是怎么做的',
+    '- Vite + React 19 + TypeScript + Tailwind CSS 4',
+    '- 内容与展示分离：所有文案都在 src/data/ 下，四个文件',
+    '- GitHub Actions 自动构建，发布到 GitHub Pages',
+    '- 产物 JS 压缩后约 78KB，没引第三方动画库',
     '',
-    '## 我在找什么',
-    '一个有真实用户、真实约束的问题，以及愿意一起把它做出来的人。',
+    '## 技术选择',
+    '刻意没装任何动画库，进场效果用自写的 useInView + CSS 过渡实现，省下约 100KB 体积。',
+    '设计上取的是纸质感：米色 #f7f3e8 打底，衬线标题配等宽字体的版本号，做成一份「可以滚动的简历」。',
     '',
     '## 怎么联系我',
-    '发邮件是最快的方式。附上你想聊的事，我一般一天内回。',
+    '邮箱 1753691858@qq.com，或者在 GitHub 上找我。',
   ],
 }
 

@@ -66,17 +66,20 @@ export function Projects() {
                 <span className="ml-2 font-mono text-base text-ink-faint">({projects.length})</span>
               </h2>
             </div>
-            <button
-              type="button"
-              onClick={() => setShowAll((v) => !v)}
-              className="focus-ring font-mono text-sm text-ink-soft underline-offset-4 transition-colors hover:text-accent hover:underline"
-            >
-              {showAll ? '收起 ←' : '查看全部项目 →'}
-            </button>
+            {/* 精选数 = 总数时，按钮点了没变化，直接不显示 */}
+            {projects.length > featured.length && (
+              <button
+                type="button"
+                onClick={() => setShowAll((v) => !v)}
+                className="focus-ring font-mono text-sm text-ink-soft underline-offset-4 transition-colors hover:text-accent hover:underline"
+              >
+                {showAll ? '收起 ←' : '查看全部项目 →'}
+              </button>
+            )}
           </div>
         </Reveal>
 
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div className={`grid gap-5 ${list.length === 1 ? 'sm:max-w-2xl' : 'sm:grid-cols-2'}`}>
           {list.map((p, i) => (
             <Reveal key={p.id} delay={Math.min(i, 4) * 70}>
               <ProjectCard project={p} />
