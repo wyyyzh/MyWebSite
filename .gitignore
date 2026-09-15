@@ -1,0 +1,25 @@
+# 依赖
+node_modules/
+
+# 构建产物（部署平台会自己构建，不需要提交）
+dist/
+dist-ssr/
+
+# 本地缓存与日志
+.vite/
+*.local
+*.log
+npm-debug.log*
+
+# 环境变量（千万别提交）
+.env
+.env.local
+.env.*.local
+
+# 编辑器 / 系统
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

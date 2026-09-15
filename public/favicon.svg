@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Life Git">
+  <rect width="32" height="32" rx="7" fill="#f7f3e8" />
+  <rect x="0.5" y="0.5" width="31" height="31" rx="6.5" fill="none" stroke="#e5dfd0" />
+  <circle cx="10" cy="16" r="5.2" fill="#2f6f4f" />
+  <circle cx="22" cy="16" r="5.2" fill="#c2603f" />
+</svg>
